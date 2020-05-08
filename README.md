@@ -11,17 +11,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## User Stories
 
 * User can visit application and sign-in.
-* User can visit application and register for an account.
+* User can visit application and register an account.
 * User ___
 
 ## Technologies Used
 
-* Node.js
 * Javascript
 * jQuery
 * React
 * Redux
+* Node.js
 * Firebase
+* Victory
 
 
 ### License

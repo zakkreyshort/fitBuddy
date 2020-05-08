@@ -61,6 +61,7 @@ export default function SignIn() {
   // applying custom styling
   const classes = useStyles();
 
+// adding authentication
   const initialUser = {id: null, email: '', password: '', error: null, auth: null}
 
   const [user, setUser] = useState(initialUser);
