@@ -36,19 +36,16 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: 'purple'
   },
   form: {
     width: '100%', 
     marginTop: theme.spacing(1),
-    // backgroundColor: 'blue'
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor: 'purple'
   },
-  // body: {
-  //   backgroundColor: 'blue'
-  // }
 }));
 
 export default function SignIn() {

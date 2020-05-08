@@ -2,12 +2,16 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignIn from './components/SignIn';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './config/theme.config';
 
 function App() {
   return (
 
 
     <Router>
+      <ThemeProvider theme={theme}>
+
       <Switch>
 
         <Route exact path ="/">
@@ -19,6 +23,8 @@ function App() {
         </Route>
 
       </Switch>
+
+      </ThemeProvider>
     </Router>
 
 
