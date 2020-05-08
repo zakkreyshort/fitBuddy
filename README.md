@@ -23,6 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Node.js
 * Firebase
 * Victory
+* Context API
 
 
 ### License
