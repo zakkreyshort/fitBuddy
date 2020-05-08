@@ -13,6 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+
+// notes:
+
+// copyright starts here
 function Copyright() {
 
   return (
@@ -27,6 +31,8 @@ function Copyright() {
   );
 }
 
+
+// styling sheet starts here
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -48,8 +54,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
+// where sign in starts
 export default function SignIn() {
+  // applying custom styling
   const classes = useStyles();
+
+
 
   return (
     <Container component="main" maxWidth="xs">
