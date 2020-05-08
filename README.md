@@ -31,6 +31,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Copyright &copy; 2020 **_Zakkrey Short_** 
 
+## Context API Docs
+
+https://reactjs.org/docs/context.html
+
 ## Available Scripts
 
 In the project directory, you can run:

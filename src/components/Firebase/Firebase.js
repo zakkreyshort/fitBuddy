@@ -1,6 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
+// import 'firebase/database';
 
 var firebaseConfig = {
     apiKey: "AIzaSyCF80aVPSwldshmZhuATsa5t2hKk5YDeSU",
@@ -15,10 +15,27 @@ var firebaseConfig = {
 
   class Firebase {
     constructor() {
+      app.initializeApp(firebaseConfig);
+      this.auth = app.auth;
+      // this.db = app.database();
+    }
 
+    doCreateUserWithEmailAndPassword = (email, password) => {
+      this.auth.createUserWithEmailAndPassword(email, password);
+    }
+
+    doSignInWithEmailAndPassword = (email, password) => {
+      this.auth.signInWithEmailAndPassword(email, password);
+    }
+
+    doSignOut = () => {
+      this.auth.signOut();
+    }
+
+    doPasswordReset = email => {
+      this.auth.sendPasswordResetEmail(email);
     }
   }
 
-// authenticate methods
 
 export default Firebase;
