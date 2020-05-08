@@ -10,7 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## User Stories
 
-* User ___
+* User can visit application and sign-in.
+* User can visit application and register for an account.
 
 ## Technologies Used
 
