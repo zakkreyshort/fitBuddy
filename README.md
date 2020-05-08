@@ -8,6 +8,26 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Wireframe
 ![Wireframe](src/img/fitBuddyComponentTree.jpg)
 
+## User Stories
+
+* User ___
+
+## Technologies Used
+
+* Node.js
+* Javascript
+* jQuery
+* React
+* Redux
+* Firebase
+
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright &copy; 2020 **_Zakkrey Short_** 
+
 ## Available Scripts
 
 In the project directory, you can run:
