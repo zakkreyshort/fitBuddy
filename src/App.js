@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignIn from './components/SignIn';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './config/theme.config';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         </Route>
 
         <Route path="/register">
-          Register
+          <Register />
         </Route>
 
       </Switch>
