@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
+export default function Register() {
   const classes = useStyles();
 
   return (
@@ -59,7 +59,7 @@ export default function SignUp() {
           <FitnessCenterIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+         Register
         </Typography>
         <form className={classes.form} noValidate>
           <TextField

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -61,6 +61,20 @@ export default function SignIn() {
   // applying custom styling
   const classes = useStyles();
 
+  const initialUser = {id: null, email: '', password: '', error: null, auth: null}
+
+  const [user, setUser] = useState(initialUser);
+
+  const handleChange = z => {
+    const {name, value} = z.target;
+    setUser({...user, [name]: value})
+  }
+
+  const handleSubmit = z => {
+
+  }
+
+  const isValidUser = user.email === '' || user.password === '';
 
 
   return (
