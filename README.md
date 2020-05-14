@@ -32,9 +32,52 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Copyright &copy; 2020 **_Zakkrey Short_** 
 
+
+# Capstone Proposal
+
+fitBuddy- Your fitness tech pal
+##### Description
+A web application where a user can keep track of their workouts on a certain date. Repetitions, sets, weight used, and description of workouts done.
+##### Use Case
+Anyone and everyone can use this application. Whether it is a light jog, swim in the Willamette, or an olympian snatching hundred’s of pounds overhead, fitBuddy can help a user keep track of their progress over time. Keep track of your date of workout, length, type, and any movements done during that time! A lot of chances to add other tech such as API calls for maps or smart watch integration.
+##### Minimum Viable Product
+(List the absolute minimum features the project requires before it is considered in a pre-alpha state)
+* User should be able to say whether they worked out in some fashion on a day. * User should be able to describe type of workout, with duration.
+* User can list exercises with sets, distance, weight lifted, etc.
+##### Tools for MVP
+(List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your MVP. Be specific.)
+*JavaScript/React
+* Firebase (authorization)
+*Materialize UI for styling elements * Context API
+##### Additional Features
+(If you finish developing your MVP and have time to spare, what features do you want to work on next? Be specific.)
+* User can create a profile to keep track of height and weight for BMI calculations. * Implements a daily calorie burner based off weight.
+* Display different workout movements
+* Visualization of body weight over the course of weeks/months * Deployment as mobile application
+##### Tools for Additional Features
+(List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your additional features. Be specific.)
+* Same languages, JS/React/, but add My/NoSQL for user integration.
+* Apple Watch API/Context API
+* Integrate social media sharing for a workout session. * Database of suggested workouts split by body part. * Victory library for data visualization
+##### Additional Information
+(Is there anything else you’d like your instructor to know?)
+I think I have a good basis of where to start. I started looking ahead into using API and Database with our react projects to get an idea of what to expect. I am super stoked for this project!!
+
+# 
+
 ## Context API Docs
 
 https://reactjs.org/docs/context.html
+
+## Firebase Docs
+
+https://firebase.google.com/docs/web/setup
+
+## Material UI
+
+https://material-ui.com
+
+# 
 
 ## Available Scripts
 
