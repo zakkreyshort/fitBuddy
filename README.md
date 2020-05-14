@@ -1,7 +1,7 @@
 # FitBuddy
 
 ## A capstone project by: Zakkrey Short
-### Last updated 8 May 2020
+### Last updated 14 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -48,7 +48,7 @@ Anyone and everyone can use this application. Whether it is a light jog, swim in
 (List the tools, frameworks, libraries, APIs, modules, resources, languages, etc that will be used to create your MVP. Be specific.)
 *JavaScript/React
 * Firebase (authorization)
-*Materialize UI for styling elements * Context API
+*Material UI for styling elements * Context API
 ##### Additional Features
 (If you finish developing your MVP and have time to spare, what features do you want to work on next? Be specific.)
 * User can create a profile to keep track of height and weight for BMI calculations. * Implements a daily calorie burner based off weight.
