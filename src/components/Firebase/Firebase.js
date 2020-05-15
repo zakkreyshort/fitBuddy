@@ -1,6 +1,5 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-import Firebase, { FirebaseContext } from './components/Firebase';
 import 'firebase/database';
 
 var firebaseConfig = {
