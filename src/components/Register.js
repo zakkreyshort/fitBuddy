@@ -1,4 +1,6 @@
-import React from 'react';
+import React , { useState } from 'react';
+import { withFirebase } from '../components/Firebase';
+import { Link, withRouter } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -49,7 +51,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Register() {
+
   const classes = useStyles();
+
+  const initialUser = {id: null, email: '', password: '', error: null, auth: null}
+
+  const [user, setUser] = useState(initialUser);
+
+  const handleChange = z => {
+    const {name, value} = z.target;
+    setUser({...user, [name]: value})
+  }
+
+  const handleSubmit = z => {
+    props.firebase.auth.createUserWithEmailAndPassword(user.email, user.password)
+    .then(authUser => {
+      setUser(initialUser);
+      props.history.push("/dashboard");
+    })
+    .catch(error => {
+      setUser({...user, error: error.message})
+    });
+  }
+
+  const isValidUser = user.name === '' || user.email === '' || user.password === '';
 
   return (
     <Container component="main" maxWidth="xs">
@@ -61,7 +86,7 @@ export default function Register() {
         <Typography component="h1" variant="h5">
          Register
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={z => z.preventDefault()}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -72,6 +97,7 @@ export default function Register() {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={handleChange}
           />
           <TextField
             variant="outlined"
@@ -83,17 +109,29 @@ export default function Register() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={handleChange}
           />
+          <Typography className={classes.error}>
+            {user.error ? user.error : ''}
+          </Typography>
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSubmit}
+            disabled={isValidUser}
           >
             Register Account
           </Button>
+
           <Grid container>
+            <Grid item>
+              <Link to='/'>
+                {"Already have an account? Sign In"}
+              </Link>
+            </Grid>
           </Grid>
         </form>
       </div>
@@ -103,3 +141,5 @@ export default function Register() {
     </Container>
   );
 }
+
+export default withRouter(withFirebase(Register));
