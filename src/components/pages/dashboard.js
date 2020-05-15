@@ -21,6 +21,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { withFirebase } from '../Firebase';
 import Sidebar from '../sidebar/index'
 import useStyles from '../../config/dashboard.config';
+import { AuthUserContext, withAuthentication } from '../session';
 // import Calendar from '../componenets/calendar';
 
 

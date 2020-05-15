@@ -81,6 +81,10 @@ https://material-ui.com
 
 https://www.npmjs.com/package/rc-calendar
 
+## Firebase AUTH
+
+https://firebase.google.com/docs/auth
+
 # 
 
 ## Available Scripts
