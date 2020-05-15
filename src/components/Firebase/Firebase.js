@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
-// import 'firebase/database';
+import Firebase, { FirebaseContext } from './components/Firebase';
+import 'firebase/database';
 
 var firebaseConfig = {
     apiKey: "AIzaSyCF80aVPSwldshmZhuATsa5t2hKk5YDeSU",

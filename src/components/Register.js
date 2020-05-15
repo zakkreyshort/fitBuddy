@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Register() {
+function Register(props) {
 
   const classes = useStyles();
 
@@ -87,6 +87,18 @@ export default function Register() {
          Register
         </Typography>
         <form className={classes.form} noValidate onSubmit={z => z.preventDefault()}>
+        <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="name"
+              label="Name"
+              name="name"
+              autoFocus
+              value={user.name}
+              onChange={handleChange}
+            />
           <TextField
             variant="outlined"
             margin="normal"

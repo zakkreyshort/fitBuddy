@@ -12,6 +12,8 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { withFirebase } from '../components/Firebase';
+import { Link, withRouter } from 'react-router-dom';
 
 
 // notes:
@@ -71,13 +73,20 @@ export default function SignIn() {
     setUser({...user, [name]: value})
   }
 
-  const handleSubmit = z => {
-
-  }
+  const handleSubmit = () => {
+    props.firebase.doSignInWithEmailAndPassword(user.email, user.password)
+    .then(authUser => {
+      setUser({initialUser})
+      props.history.push("/dashboard");
+    })
+    .catch(error => {
+      setUser({...user, error: error.message})
+    });
+    }
 
   const isValidUser = user.email === '' || user.password === '';
 
-  console.log(user);
+
 
   return (
     <Container component="main" maxWidth="xs">
@@ -89,7 +98,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={z => z.preventDefault()}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -100,6 +109,7 @@ export default function SignIn() {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={handleChange}
           />
           <TextField
             variant="outlined"
@@ -111,6 +121,7 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={handleChange}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -122,6 +133,8 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSubmit}
+            disabled={isValidUser}
           >
             Sign In
           </Button>
@@ -132,7 +145,7 @@ export default function SignIn() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
@@ -145,4 +158,6 @@ export default function SignIn() {
     </Container>
   );
 }
+
+export default withRouter(withFirebase(SignIn));
 
