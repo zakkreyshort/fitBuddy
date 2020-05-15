@@ -18,7 +18,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" to="https://material-ui.com/">
         fitBuddy
       </Link>{' '}
       {new Date().getFullYear()}
@@ -58,12 +58,12 @@ function Register(props) {
 
   const [user, setUser] = useState(initialUser);
 
-  const handleChange = z => {
-    const {name, value} = z.target;
+  const handleChange = e => {
+    const {name, value} = e.target;
     setUser({...user, [name]: value})
   }
 
-  const handleSubmit = z => {
+  const handleSubmit = e => {
     props.firebase.auth.createUserWithEmailAndPassword(user.email, user.password)
     .then(authUser => {
       setUser(initialUser);
@@ -86,8 +86,10 @@ function Register(props) {
         <Typography component="h1" variant="h5">
          Register
         </Typography>
-        <form className={classes.form} noValidate onSubmit={z => z.preventDefault()}>
-        <TextField
+        <form className={classes.form}
+         noValidate
+        onSubmit={e => e.preventDefault()}>
+        {/* <TextField
               variant="outlined"
               margin="normal"
               required
@@ -98,7 +100,7 @@ function Register(props) {
               autoFocus
               value={user.name}
               onChange={handleChange}
-            />
+            /> */}
           <TextField
             variant="outlined"
             margin="normal"

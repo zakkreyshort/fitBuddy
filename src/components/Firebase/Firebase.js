@@ -16,7 +16,7 @@ var firebaseConfig = {
   class Firebase {
     constructor() {
       app.initializeApp(firebaseConfig);
-      this.auth = app.auth;
+      this.auth = app.auth();
       this.db = app.database();
     }
 
