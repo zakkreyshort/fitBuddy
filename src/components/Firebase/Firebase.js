@@ -17,7 +17,7 @@ var firebaseConfig = {
     constructor() {
       app.initializeApp(firebaseConfig);
       this.auth = app.auth;
-      // this.db = app.database();
+      this.db = app.database();
     }
 
     doCreateUserWithEmailAndPassword = (email, password) => {

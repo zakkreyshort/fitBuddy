@@ -27,7 +27,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" to="https://material-ui.com/">
         fitBuddy
       </Link>{' '}
       {new Date().getFullYear()}
@@ -61,12 +61,9 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-// where sign in starts
 function SignIn(props) {
-  // applying custom styling
   const classes = useStyles();
 
-// adding authentication
   const initialUser = {id: null, email: '', password: '', error: null, auth: null}
 
   const [user, setUser] = useState(initialUser);
@@ -85,11 +82,9 @@ function SignIn(props) {
     .catch(error => {
       setUser({...user, error: error.message})
     });
-    }
+  }
 
   const isValidUser = user.email === '' || user.password === '';
-
-
 
   return (
     <Container component="main" maxWidth="xs">
@@ -101,7 +96,11 @@ function SignIn(props) {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate onSubmit={z => z.preventDefault()}>
+        <form 
+        className={classes.form} 
+        noValidate 
+        onSubmit={z => z.preventDefault()}>
+
           <TextField
             variant="outlined"
             margin="normal"
@@ -143,12 +142,12 @@ function SignIn(props) {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link to="#" variant="body2">
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/register" variant="body2">
+              <Link to="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
