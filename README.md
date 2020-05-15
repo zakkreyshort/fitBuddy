@@ -12,7 +12,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * User can visit application and sign-in.
 * User can visit application and register an account.
-* User ___
+* User can log out.
+* User can select, _forgot password_ and get an email link to reset their account password.
+* User can visit their dashboard(will house calendar and workouts).
+* User can ___
 
 ## Technologies Used
 
