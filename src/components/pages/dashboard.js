@@ -18,6 +18,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { makeStyles } from '@material-ui/core/styles';
 import { withFirebase } from '../Firebase';
+import Sidebar from '../sidebar/index'
 
 
 
@@ -118,15 +119,21 @@ const useStyles = makeStyles((theme) => ({
 
 
 function Dashboard() {
+
+
   const classes = useStyles();
+
   const [open, setOpen] = React.useState(true);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  const handleDrawerOpen = () => setOpen(true);
+  
+  const handleDrawerClose = () => setOpen(false);
+
+
+//   const signOut = () => {
+//       props.firebase.auth.signOut()
+//       props.history.push("/");
+//   }
 
   return (
     <div className={classes.root}>
@@ -152,6 +159,13 @@ function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
+
+    <Sidebar 
+    // signOut={signOut}
+    open={open}
+    handleDrawerClose={handleDrawerClose}
+    />
+
       <Drawer
         variant="permanent"
         classes={{
