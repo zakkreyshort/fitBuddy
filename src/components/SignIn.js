@@ -77,6 +77,7 @@ export default function SignIn() {
 
   const isValidUser = user.email === '' || user.password === '';
 
+  console.log(user);
 
   return (
     <Container component="main" maxWidth="xs">
