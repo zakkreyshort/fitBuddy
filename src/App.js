@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './config/theme.config';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
+import Dashboard from './components/pages/dashboard';
 
 
 
@@ -21,6 +22,9 @@ function App() {
           <Register />
         </Route>
       </Switch>
+      <Route path="/dashboard">
+      <Dashboard />
+      </Route>
       </ThemeProvider>
     </Router>
 
