@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Switch, Route, useRouteMatch, withRouter } from "react-router-dom";
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,6 +17,7 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { makeStyles } from '@material-ui/core/styles';
+import { withFirebase } from '../Firebase';
 
 
 
@@ -116,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function Dashboard() {
+function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -191,3 +192,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default withRouter(withFirebase(Dashboard));
