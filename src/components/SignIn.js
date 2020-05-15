@@ -13,6 +13,9 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import Typography from '@material-ui/core/Typography';
+import PasswordForget from './PasswordForget';
+
+
 
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -74,8 +77,7 @@ function SignIn(props) {
   }
 
   const handleSubmit = () => {
-    props.firebase.doSignInWithEmailAndPassword(user.email, user.password)
-    .then(authUser => {
+    props.firebase.doSignInWithEmailAndPassword(user.email, user.password).then(authUser => {
       setUser({initialUser})
       props.history.push("/dashboard");
     })
@@ -99,7 +101,7 @@ function SignIn(props) {
         <form 
         className={classes.form} 
         noValidate 
-        onSubmit={z => z.preventDefault()}>
+        onSubmit={e => e.preventDefault()}>
 
           <TextField
             variant="outlined"
@@ -142,7 +144,7 @@ function SignIn(props) {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link to="#" variant="body2">
+              <Link to="/passwordforget" variant="body2">
                 Forgot password?
               </Link>
             </Grid>
