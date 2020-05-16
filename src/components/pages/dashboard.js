@@ -22,7 +22,7 @@ import { withFirebase } from '../Firebase';
 import Sidebar from '../sidebar/index'
 import useStyles from '../../config/dashboard.config';
 import { AuthUserContext, withAuthentication } from '../session';
-// import Calendar from '../componenets/calendar';
+import Calendar from '../calendar';
 
 
 
@@ -60,9 +60,11 @@ let match = useRouteMatch();
   }
 
   return (
-    //   <AuthUserContext.Consumer>
 
-    //   </AuthUserContext.Consumer>
+      <AuthUserContext.Consumer>
+        {
+          authUser => authUser ? (
+
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -73,7 +75,7 @@ let match = useRouteMatch();
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
-          >
+            >
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
@@ -89,21 +91,25 @@ let match = useRouteMatch();
 
     <Sidebar 
     signOut={signOut} open={open} handleDrawerClose={handleDrawerClose}
-
+    
     />
 
      
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          {/* <Calendar /> */}
+          <Calendar firebase={props.firebase} authUser={authUser}/>
           <Box pt={4}>
             <Copyright />
           </Box>
         </Container>
       </main>
     </div>
-  );
-}
+          ) : ( 
+            <p>Not Authorized</p>
+      )}
+        </AuthUserContext.Consumer>
+        );
+};
 
-export default withRouter(withFirebase(Dashboard));
+export default withRouter(withAuthentication(Dashboard));
