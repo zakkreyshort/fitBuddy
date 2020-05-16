@@ -11,12 +11,12 @@ function Calendar(props) {
 
     const {firebase, authUser} = props;
     
-        let defaultSelectedDay = {
-            day: moment().format("D"),
-            month: moment().month()
-        };
-
-
+    let defaultSelectedDay = {
+        day: moment().format("D"),
+        month: moment().month()
+    };
+    
+    
     const [dateObject, setdateObject] = useState(moment());
     const [showMonthTable, setShowMonthTable] = useState(false);
     const [selectedDay, setSelected] = useState(defaultSelectedDay);
@@ -62,8 +62,8 @@ function Calendar(props) {
                         showMonthTable={showMonthTable}
                         toggleMonthSelect={toggleMonthSelect}
                     />
-                    {/* <CalendarBody 
-                    /> */}
+                    <CalendarBody firstDayOfMonth={firstDayOfMonth} daysInMonth={daysInMonth} currentDay={currentDay} currentMonth={currentMonth} currentMonthNum={currentMonthNum} actualMonth={actualMonth} setSelectedDay={setSelectedDay} selectedDay={selectedDay} weekdays={moment.weekdays()} 
+                    />
             </Grid>
         </Grid>
     )
