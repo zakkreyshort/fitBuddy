@@ -20,6 +20,9 @@ function Calendar(props) {
     const [dateObject, setdateObject] = useState(moment());
     const [showMonthTable, setShowMonthTable] = useState(false);
     const [selectedDay, setSelected] = useState(defaultSelectedDay);
+
+    const [activities, setActivities] = useState(true);
+    const [loading, setLoading] = useState([]);
     
     
     const allMonths = moment.months();
@@ -64,6 +67,12 @@ function Calendar(props) {
                     />
                     <CalendarBody firstDayOfMonth={firstDayOfMonth} daysInMonth={daysInMonth} currentDay={currentDay} currentMonth={currentMonth} currentMonthNum={currentMonthNum} actualMonth={actualMonth} setSelectedDay={setSelectedDay} selectedDay={selectedDay} weekdays={moment.weekdays()} 
                     />
+            </Grid>
+            <Grid item xs={12} md={7}>
+                <Paper className="paper">
+                    <h3>Workout on {selectedDay.day}-{selectedDay.month + 1}</h3>
+                    <WorkoutList loading={loading} workouts={workouts} authUser={props.authUser} setOpenSnackbar={setOpenSnackbar} setSnackbarMsg={setSnackbarMsg} />
+                </Paper>
             </Grid>
         </Grid>
     )
