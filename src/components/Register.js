@@ -66,6 +66,15 @@ function Register(props) {
   const handleSubmit = e => {
     props.firebase.auth.createUserWithEmailAndPassword(user.email, user.password)
     .then(authUser => {
+      return props.firebase
+      .user(authUser.user.uid)
+      .set({
+        username: user.name,
+        email: user.email,
+        activities: 'not set'
+      });
+    })
+    .then(authUser => {
       setUser(initialUser);
       props.history.push("/dashboard");
     })
@@ -89,7 +98,7 @@ function Register(props) {
         <form className={classes.form}
          noValidate
         onSubmit={e => e.preventDefault()}>
-        {/* <TextField
+        <TextField
               variant="outlined"
               margin="normal"
               required
@@ -100,7 +109,7 @@ function Register(props) {
               autoFocus
               value={user.name}
               onChange={handleChange}
-            /> */}
+            />
           <TextField
             variant="outlined"
             margin="normal"
