@@ -20,7 +20,6 @@ var firebaseConfig = {
       this.db = app.database();
     }
 
-    
     doCreateUserWithEmailAndPassword = (email, password) => 
     this.auth.createUserWithEmailAndPassword(email, password);
     
@@ -40,5 +39,6 @@ var firebaseConfig = {
     user = uid => this.db.ref(`users/${uid}`);
     users = () => this.db.ref('users');
   }
+  
   
   export default Firebase;
