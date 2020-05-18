@@ -100,6 +100,10 @@ https://firebase.google.com/docs/functions/gcp-storage-events
 
 https://stackoverflow.com/questions/37403747/firebase-permission-denied
 
+## SO Article on UID/getting user values
+
+https://stackoverflow.com/questions/39542945/firebase-get-user-by-id
+
 # 
 
 ## Available Scripts
