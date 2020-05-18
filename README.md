@@ -92,6 +92,10 @@ https://firebase.google.com/docs/auth
 
 https://programmingwithmosh.com/react/build-a-react-calendar-component-from-scratch/
 
+## Cloud Storage and creating Auth/Admin Pages
+
+https://firebase.google.com/docs/functions/gcp-storage-events
+
 # 
 
 ## Available Scripts
