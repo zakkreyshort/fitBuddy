@@ -37,7 +37,7 @@ var firebaseConfig = {
     this.auth.sendPasswordResetEmail(email);
     
     
-    user = uid => this.db.ref('users/${uid}');
+    user = uid => this.db.ref(`users/${uid}`);
     users = () => this.db.ref('users');
   }
   

@@ -50,6 +50,22 @@ function Sidebar(props) {
                         <ListItemText primary="Workouts" />
                     </ListItem>
                 </Link>
+                <Link to={`${match.url}`}>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <EventNoteIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Workouts" />
+                    </ListItem>
+                </Link>
+                <Link to={`${match.url}`}>
+                    <ListItem button>
+                        <ListItemIcon>
+                            <EventNoteIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Workouts" />
+                    </ListItem>
+                </Link>
             </List>
             <Divider />
             <List>
