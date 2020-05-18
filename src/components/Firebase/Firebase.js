@@ -20,25 +20,25 @@ var firebaseConfig = {
       this.db = app.database();
     }
 
+    
+    doCreateUserWithEmailAndPassword = (email, password) => 
+    this.auth.createUserWithEmailAndPassword(email, password);
+    
+    
+    doSignInWithEmailAndPassword = (email, password) => 
+    this.auth.signInWithEmailAndPassword(email, password);
+    
+    
+    doSignOut = () => 
+    this.auth.signOut();
+    
+    
+    doPasswordReset = email => 
+    this.auth.sendPasswordResetEmail(email);
+    
+    
     user = uid => this.db.ref('users/${uid}');
     users = () => this.db.ref('users');
-
-    doCreateUserWithEmailAndPassword = (email, password) => 
-      this.auth.createUserWithEmailAndPassword(email, password);
-    
-
-    doSignInWithEmailAndPassword = (email, password) => 
-      this.auth.signInWithEmailAndPassword(email, password);
-    
-
-    doSignOut = () => 
-      this.auth.signOut();
-    
-
-    doPasswordReset = email => 
-      this.auth.sendPasswordResetEmail(email);
-    
   }
-
-
-export default Firebase;
+  
+  export default Firebase;

@@ -54,7 +54,7 @@ function Register(props) {
 
   const classes = useStyles();
 
-  const initialUser = {id: null, email: '', password: '', error: null, auth: null}
+  const initialUser = {id: null, name: '', email: '', password: '', error: null, auth: null}
 
   const [user, setUser] = useState(initialUser);
 
