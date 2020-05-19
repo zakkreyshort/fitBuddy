@@ -8,7 +8,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
-import Snackbar from '@material-ui/core/Snackbar'
 
 const useStyles = makeStyles (theme => ({
     formControl: {

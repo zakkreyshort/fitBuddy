@@ -31,6 +31,9 @@ const CalendarBody = props => {
         // Check if day is selected day
         if (selectedDay.day == d && currentMonthNum() == selectedDay.month ) selectDay = "selected-day";
 
+        let formattedDate = `${d}-${currentMonthNum()}`;
+        if (activeDays.indexOf(formattedDate) !== -1) activeDay = "active";
+
         monthDays.push(
             <TableCell 
                 key={d} 

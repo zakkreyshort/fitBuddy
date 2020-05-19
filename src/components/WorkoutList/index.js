@@ -45,7 +45,7 @@ function WorkoutList(props) {
             workouts === 'not set' || workouts === null
             ? <p>No workouts added. Get moving!</p>
             :
-            <TableContainer>
+            <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -82,8 +82,10 @@ function WorkoutList(props) {
                                         <TableCell>{name}</TableCell>
                                         <TableCell>{type}</TableCell>
                                         <TableCell>{duration}</TableCell>
+                                        <TableCell>
                                             <DeleteIcon onClick={e=>deleteWorkout(i)}/>
                                             <EditIcon onClick={e=> editWorkout(workout, i)} style={{marginLeft: "20px"}} />
+                                        </TableCell>
                                     </TableRow>
                                 );
                             })

@@ -6,7 +6,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import CalendarBody from './calendarbody';
 import CalendarHead from './calendarhead';
 import AddWorkout from '../AddWorkout/AddWorkout';
-import WorkoutList from '../WorkoutList';
+import WorkoutList from '../WorkoutList/index';
 import EditWorkout from '../EditWorkout/EditWorkout';
 
 
@@ -70,7 +70,7 @@ function Calendar(props) {
             let data = snapshot.val()
             setWorkouts(data);
             setLoading(false);
-            // setEditing(false);
+            setEditing(false);
         });
         retrieveActiveDays();
     };
