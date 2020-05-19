@@ -22,14 +22,12 @@ function Calendar(props) {
     const [dateObject, setdateObject] = useState(moment());
     const [showMonthTable, setShowMonthTable] = useState(false);
     const [selectedDay, setSelected] = useState(defaultSelectedDay);
-
-    const [workouts, setWorkouts] = useState(true);
-    const [loading, setLoading] = useState([]);
     
     
     const allMonths = moment.months();
     const currentMonth = () => dateObject.format("MMMM");
     const currentYear = () => dateObject.format("YYYY");
+    
     const setMonth = month => {
         let monthNo = allMonths.indexOf(month);
         let newDateObject = Object.assign({}, dateObject);
@@ -37,9 +35,9 @@ function Calendar(props) {
         setdateObject(newDateObject);
         setShowMonthTable(false);
     }
-
+    
     const toggleMonthSelect = () => setShowMonthTable(!showMonthTable);
-
+    
     const setSelectedDay = day => {
         setSelected({
             day,
@@ -53,8 +51,17 @@ function Calendar(props) {
     const actualMonth = () => moment().format("MMMM");
     
     const firstDayOfMonth = () => moment(dateObject).startOf('month').format("d");
-
+    
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+    const [snackbarMsg, setSnackbarMsg] = useState(null);
+    
+    const [workouts, setWorkouts] = useState(true);
+    const [loading, setLoading] = useState([]);
+    const [activeDays, setActiveDays] = useState([]);
+    
+    
     const retrieveData = () => {
+
         let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
 
         let ref = firebase.db.ref().child(`users/${authUser.uid}/workouts`);
@@ -62,9 +69,14 @@ function Calendar(props) {
             let data = snapshot.val()
             setWorkouts(data);
             setLoading(false);
+            setEditing(false);
         });
+        retrieveActiveDays();
     };
     
+    const retrieveActiveDays = () = {
+        
+    }
 
 
     return (

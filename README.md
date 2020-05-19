@@ -128,6 +128,10 @@ https://loading.io
 
 https://github.com/tannerlinsley/react-table
 
+## Fetching Data in React
+
+https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
+
 
 # 
 
