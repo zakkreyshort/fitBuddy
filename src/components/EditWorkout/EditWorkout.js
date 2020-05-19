@@ -64,18 +64,28 @@ function EditWorkout(props) {
         <form noValidate onSubmit={e => e.preventDefault()}>
             <FormControl className={classes.formControl}>
                 <TextField style={{marginTop: '5px'}} variant="outlined" margin="normal" required fullWidth value={newWorkout.name} label="Workout name" name="name" onChange={handleChange} />
-                <div>
-                    <Typography>
+                <div style={{marginTop: '20px', marginBottom: '30px'}}>
+                    <Typography id="discrete-slider" gutterBottom>
                         Type
                     </Typography>
                     <Select>
-
+                        <MenuItem></MenuItem>
+                        <MenuItem></MenuItem>
+                        <MenuItem></MenuItem>
+                        <MenuItem></MenuItem>
+                        <MenuItem></MenuItem>
                     </Select>
                 </div>
                 <Typography>
-                    
+                    Duration
                 </Typography>
+                <Slider />
             </FormControl>
+            <Button>
+                Save Workout
+            </Button>
         </form>
     )
 }
+
+export default withFirebase(EditWorkout);
