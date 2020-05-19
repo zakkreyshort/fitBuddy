@@ -31,7 +31,7 @@ function AddWorkout(props) {
     let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
 
     const defaultWorkout = {
-        name = '',
+        name: '',
         type: 1,
         duration: 60,
         date: queryDate

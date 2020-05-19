@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import CalendarBody from './calendarbody';
 import CalendarHead from './calendarhead';
-import AddWorkout from '../AddWorkout';
+import AddWorkout from '../AddWorkout/AddWorkout';
 import WorkoutList from '../WorkoutList';
 import EditWorkout from '../EditWorkout/EditWorkout';
 
@@ -83,7 +83,7 @@ function Calendar(props) {
             const arr = values.map(obj => {
                 return obj.date.length === 8
                 ? obj.date.slice(0,3)
-                : objdate.slice(0,4)
+                : obj.date.slice(0,4)
             });
             setActiveDays(arr);
         });
