@@ -60,11 +60,27 @@ function WorkoutList(props) {
                                 let {name, type, duration}= workout;
                                 switch(workout.type){
                                     case 1:
+                                        type = "Weightlifting";
+                                        break;
                                     case 2:
+                                        type = "Running";
+                                        break;
                                     case 3:
+                                        type = "Swimming";
+                                        break;
                                     case 4:
+                                        type = "Biking";
+                                        break;
                                     case 5:
-                                }
+                                        type = "Hiking";
+                                        break;
+                                    default: type = "Not set";
+                                };
+                                return (
+                                    <TableRow ket={i}>
+
+                                    </TableRow>
+                                );
                             })
                         }
                     </TableBody>
