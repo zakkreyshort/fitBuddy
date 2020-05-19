@@ -12,6 +12,7 @@ import DeleteIcon from '@material-ui/core/Delete';
 import EditIcon from '@material-ui/core/Edit';
 
 function WorkoutList(props) {
+    
     const {loading, workouts, editWorkout, setOpenSnackbar, setSnackbarMsg, setEditing} = props;
 
     const deleteWorkout = (z) => {

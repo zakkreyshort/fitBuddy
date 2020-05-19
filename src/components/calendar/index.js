@@ -6,6 +6,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import CalendarBody from './calendarbody';
 import CalendarHead from './calendarhead';
 import AddWorkout from '../AddWorkout';
+import WorkoutList from '../WorkoutList';
 
 
 function Calendar(props) {
