@@ -9,10 +9,29 @@ import FormControl from '@material-ui/core/FormControl';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 
+const useStyles = makeStyles (theme => ({
+    formControl: {
+        minWidth: '100%',
+    },
+    selectEmpty: {
+        marginTop: theme.spacing(2),
+    },
+}));
 
 
-const AddWorkout = () => {
 
+function AddWorkout(props) {
+    const classes = useStyles();
+
+    const { authUser, firebase, selectedDat, setOpenSnackbar, setSnackbarMsg } = props;
+
+    return (
+        <form noValidate onSubmit={e => e.preventDefault()}>
+            <FormControl className={classes.formControl}>
+
+            </FormControl>
+        </form>
+    )
 }
 
 export default AddWorkout;
