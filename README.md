@@ -112,6 +112,10 @@ https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/
 
 https://v3.material-ui.com/style/typography/#migration-to-typography-v2
 
+## Converting timestamp to readable data
+
+https://teamtreehouse.com/community/convert-timestamp-from-firebase-to-readable-date
+
 
 # 
 

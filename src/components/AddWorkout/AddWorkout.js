@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withFirebase } from '../Firebase';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -23,8 +23,31 @@ const useStyles = makeStyles (theme => ({
 function AddWorkout(props) {
     const classes = useStyles();
 
-    const { authUser, firebase, selectedDat, setOpenSnackbar, setSnackbarMsg } = props;
+    const { authUser, firebase, selectedDay, setOpenSnackbar, setSnackbarMsg } = props;
     const uid = authUser.uid;
+
+    selectedDay.year = new Date().getFullYear();
+    let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
+
+    const defaultWorkout = {
+        name = '',
+        type: 1,
+        duration: 60,
+        date: queryDate
+    }
+
+    const [workout, setWorkout] = useState(defaultWorkout);
+
+    const handleChange = e => {
+        const { name, value } = e.target
+        setWorkout({
+            ...workout,
+            date: queryDate,
+            [name]: value
+        });
+    }
+
+    
 
     return (
         <form noValidate onSubmit={e => e.preventDefault()}>
