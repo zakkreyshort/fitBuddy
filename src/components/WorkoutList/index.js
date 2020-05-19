@@ -77,7 +77,7 @@ function WorkoutList(props) {
                                     default: type = "Not set";
                                 };
                                 return (
-                                    <TableRow ket={i}>
+                                    <TableRow key={i}>
 
                                     </TableRow>
                                 );
