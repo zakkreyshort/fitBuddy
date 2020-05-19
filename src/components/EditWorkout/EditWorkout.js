@@ -61,8 +61,21 @@ function EditWorkout(props) {
     }
 
     return (
-        <form>
-            
+        <form noValidate onSubmit={e => e.preventDefault()}>
+            <FormControl className={classes.formControl}>
+                <TextField style={{marginTop: '5px'}} variant="outlined" margin="normal" required fullWidth value={newWorkout.name} label="Workout name" name="name" onChange={handleChange} />
+                <div>
+                    <Typography>
+                        Type
+                    </Typography>
+                    <Select>
+
+                    </Select>
+                </div>
+                <Typography>
+                    
+                </Typography>
+            </FormControl>
         </form>
     )
 }
