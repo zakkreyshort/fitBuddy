@@ -74,8 +74,30 @@ function Calendar(props) {
         retrieveActiveDays();
     };
     
-    const retrieveActiveDays = () = {
-        
+    const retrieveActiveDays = () => {
+        let ref = firebase.db.ref().child(`users/${authUser.uid}/workouts`);
+        ref.on("value", snapshot => {
+            let data = snapshot.val();
+            const values = Object.values(data);
+            const arr = values.map(obj => {
+                return obj.date.length === 8
+                ? obj.date.slice(0,3)
+                : objdate.slice(0,4)
+            });
+            setActiveDays(arr);
+        });
+    }
+
+    useEffect(() => retrieveData(), [selectedDay]);
+
+    const [editing, setEditing] = useState(false);
+    const [workout, setWorkout] = useState(null);
+    const [workoutKey, setWorkoutKey] = useState(null);
+
+    const editWorkout = (workout, i) => {
+        setWorkoutKey(Object.keys(workouts)[i]);
+        setEditing(true);
+        setWorkout(workout);
     }
 
 
@@ -90,7 +112,7 @@ function Calendar(props) {
                         showMonthTable={showMonthTable}
                         toggleMonthSelect={toggleMonthSelect}
                     />
-                    <CalendarBody firstDayOfMonth={firstDayOfMonth} daysInMonth={daysInMonth} currentDay={currentDay} currentMonth={currentMonth} currentMonthNum={currentMonthNum} actualMonth={actualMonth} setSelectedDay={setSelectedDay} selectedDay={selectedDay} weekdays={moment.weekdays()} 
+                    <CalendarBody firstDayOfMonth={firstDayOfMonth} daysInMonth={daysInMonth} currentDay={currentDay} currentMonth={currentMonth} currentMonthNum={currentMonthNum} actualMonth={actualMonth} setSelectedDay={setSelectedDay} selectedDay={selectedDay} weekdays={moment.weekdays()} activeDays={activeDays} 
                     />
             </Grid>
             <Grid item xs={12} md={7}>
