@@ -25,6 +25,28 @@ function WorkoutList(props) {
 
         props.firebase.updateWorkout(props.authUser.uid, emptyWorkout, workoutKey);
 
-        
+        setOpenSnackbar(true);
+        setSnackbarMsg('Deleted workout!');
+        setTimeout(() => {
+            setOpenSnackbar(false)
+        }, 3000)
+        setEditing(false);
     }
+
+    return (
+        <>
+        {
+            loading === true
+            ? <img src={loader} alt={loader}></img>
+            : ''
+        }
+        {
+            workouts === 'not set' || workouts === null
+            ? <p>No workouts added. Get moving!</p>
+            :
+            <TableContainer>
+                
+            </TableContainer>
+        }
+    )
 }
