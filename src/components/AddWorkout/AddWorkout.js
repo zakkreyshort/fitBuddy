@@ -28,7 +28,17 @@ function AddWorkout(props) {
     return (
         <form noValidate onSubmit={e => e.preventDefault()}>
             <FormControl className={classes.formControl}>
-
+                <TextField 
+                style={{marginTop: '5px'}}
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                label="Workout name"
+                value={workout.name}
+                name="name"
+                onChange={handleChange}
+                />
             </FormControl>
         </form>
     )
