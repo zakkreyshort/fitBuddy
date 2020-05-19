@@ -7,6 +7,7 @@ import CalendarBody from './calendarbody';
 import CalendarHead from './calendarhead';
 import AddWorkout from '../AddWorkout';
 import WorkoutList from '../WorkoutList';
+import EditWorkout from '../EditWorkout/EditWorkout';
 
 
 function Calendar(props) {
@@ -115,12 +116,31 @@ function Calendar(props) {
                     <CalendarBody firstDayOfMonth={firstDayOfMonth} daysInMonth={daysInMonth} currentDay={currentDay} currentMonth={currentMonth} currentMonthNum={currentMonthNum} actualMonth={actualMonth} setSelectedDay={setSelectedDay} selectedDay={selectedDay} weekdays={moment.weekdays()} activeDays={activeDays} 
                     />
             </Grid>
+            <Grid item xs={12} md={4} lg={3}>
+                <Paper className="paper">
+                    { editing 
+                    ?
+                        <>
+                        <h4>Edit workout for {selectedDay.day}-{selectedDay.month + 1}</h4>
+                        <EditWorkout />
+                        </>
+                        :
+                        <>
+                        <h4>Add workout for {selectedDay.day}-{selectedDay.month + 1}</h4>
+                        <AddWorkout />
+                        </>
+                        }
+                </Paper>
+            </Grid>
             <Grid item xs={12} md={7}>
                 <Paper className="paper">
                     <h3>Workout on {selectedDay.day}-{selectedDay.month + 1}</h3>
-                    <WorkoutList loading={loading} workouts={workouts} authUser={props.authUser} setOpenSnackbar={setOpenSnackbar} setSnackbarMsg={setSnackbarMsg} />
+                    <WorkoutList loading={loading} workouts={workouts} authUser={props.authUser} setOpenSnackbar={setOpenSnackbar} setSnackbarMsg={setSnackbarMsg} editWorkout={editWorkout} setEditing={setEditing} />
+
                 </Paper>
+
             </Grid>
+            <Snackbar />
         </Grid>
     )
 };
