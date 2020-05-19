@@ -68,15 +68,15 @@ function EditWorkout(props) {
                     <Typography id="discrete-slider" gutterBottom>
                         Type
                     </Typography>
-                    <Select>
-                        <MenuItem></MenuItem>
-                        <MenuItem></MenuItem>
-                        <MenuItem></MenuItem>
-                        <MenuItem></MenuItem>
-                        <MenuItem></MenuItem>
+                    <Select labelId="demo-simple-select-label" id="demo-simple-select-label" value={newWorkout.type} style={{minWidth: '100%'}} name="type" onChange={handleChange}>
+                    <MenuItem value={1}>Weightlifting</MenuItem>
+                    <MenuItem value={2}>Running</MenuItem>
+                    <MenuItem value={3}>Swimming</MenuItem>
+                    <MenuItem value={4}>Biking</MenuItem>
+                    <MenuItem value={5}>Hiking</MenuItem>
                     </Select>
                 </div>
-                <Typography>
+                <Typography id="discrete-slider" gutterBottom>
                     Duration
                 </Typography>
                 <Slider />
