@@ -78,7 +78,11 @@ function WorkoutList(props) {
                                 };
                                 return (
                                     <TableRow key={i}>
-
+                                        <TableCell>{name}</TableCell>
+                                        <TableCell>{type}</TableCell>
+                                        <TableCell>{duration}</TableCell>
+                                            <DeleteIcon onClick={e=>deleteWorkout(i)}/>
+                                            <EditIcon onClick={e=> editWorkout(workout, i)} style={{marginLeft: "20px"}} />
                                     </TableRow>
                                 );
                             })
