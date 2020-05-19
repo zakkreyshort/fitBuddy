@@ -1,7 +1,7 @@
 # FitBuddy
 
 ## A capstone project by: Zakkrey Short
-### Last updated 18 May 2020
+### Last updated 19 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
