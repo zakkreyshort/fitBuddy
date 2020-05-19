@@ -1,6 +1,6 @@
 import React from 'react';
 import { withFirebase } from '../Firebase';
-import loader from './loader.gif'
+import loader from './pacmanLoad.gif'
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -45,8 +45,34 @@ function WorkoutList(props) {
             ? <p>No workouts added. Get moving!</p>
             :
             <TableContainer>
-                
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Name</TableCell>
+                            <TableCell>Type</TableCell>
+                            <TableCell>Duration</TableCell>
+                            <TableCell>Actions</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {
+                            Object.values(workouts).map((workout, i) => {
+                                let {name, type, duration}= workout;
+                                switch(workout.type){
+                                    case 1:
+                                    case 2:
+                                    case 3:
+                                    case 4:
+                                    case 5:
+                                }
+                            })
+                        }
+                    </TableBody>
+                </Table>
             </TableContainer>
         }
+        </>
     )
-}
+};
+
+export default withFirebase(WorkoutList);
