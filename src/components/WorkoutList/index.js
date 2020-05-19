@@ -10,3 +10,21 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import DeleteIcon from '@material-ui/core/Delete';
 import EditIcon from '@material-ui/core/Edit';
+
+function WorkoutList(props) {
+    const {loading, workouts, editWorkout, setOpenSnackbar, setSnackbarMsg, setEditing} = props;
+
+    const deleteWorkout = (z) => {
+        const workoutKey = Object.keys(workouts)[z];
+        const emptyWorkout = {
+            date: null,
+            duration: null,
+            type: null,
+            name: null
+        };
+
+        props.firebase.updateWorkout(props.authUser.uid, emptyWorkout, workoutKey);
+
+        
+    }
+}
