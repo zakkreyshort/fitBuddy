@@ -70,7 +70,7 @@ function Calendar(props) {
             let data = snapshot.val()
             setWorkouts(data);
             setLoading(false);
-            setEditing(false);
+            // setEditing(false);
         });
         retrieveActiveDays();
     };
@@ -78,7 +78,7 @@ function Calendar(props) {
     const retrieveActiveDays = () => {
         let ref = firebase.db.ref().child(`users/${authUser.uid}/workouts`);
         ref.on("value", snapshot => {
-            let data = snapshot.val();
+            let data = snapshot.val()
             const values = Object.values(data);
             const arr = values.map(obj => {
                 return obj.date.length === 8

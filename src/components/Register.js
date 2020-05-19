@@ -71,7 +71,7 @@ function Register(props) {
       .set({
         username: user.name,
         email: user.email,
-        activities: 'not set'
+        workouts: 'not set'
       });
     })
     .then(authUser => {
