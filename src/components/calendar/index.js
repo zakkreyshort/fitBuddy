@@ -122,12 +122,12 @@ function Calendar(props) {
                     ?
                         <>
                         <h4>Edit workout for {selectedDay.day}-{selectedDay.month + 1}</h4>
-                        <EditWorkout />
+                        <EditWorkout workout={workout} workoutKey={workoutKey} selectedDay={selectedDay} authUser={props.authUser} setEditing={setEditing} setOpenSnackbar={setOpenSnackbar} setSnackbarMsg={setSnackbarMsg} />
                         </>
                         :
                         <>
                         <h4>Add workout for {selectedDay.day}-{selectedDay.month + 1}</h4>
-                        <AddWorkout />
+                        <AddWorkout selectedDay={selectedDay} authUser={authUser} setOpenSnackbar={setOpenSnackbar} setSnackbarMsg={setSnackbarMsg} />
                         </>
                         }
                 </Paper>
@@ -140,7 +140,9 @@ function Calendar(props) {
                 </Paper>
 
             </Grid>
-            <Snackbar />
+            <Snackbar anchorOrigin={{
+                vertical: 'bottom', horizontal: 'right',
+            }} open={openSnackbar} message={snackbarMsg} />
         </Grid>
     )
 };
