@@ -34,10 +34,19 @@ var firebaseConfig = {
     
     doPasswordReset = email => 
     this.auth.sendPasswordResetEmail(email);
+
     
     
     user = uid => this.db.ref(`users/${uid}`);
     users = () => this.db.ref('users');
+    
+    addWorkout = (uid, workout) => {
+      const ref = this.db.ref().child(`users/${uid}/workouts`);
+      ref.push(workout);
+    }
+
+    
+
   }
   
   

@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Snackbar from '@material-ui/core/Snackbar';
 import CalendarBody from './calendarbody';
 import CalendarHead from './calendarhead';
+import AddWorkout from '../AddWorkout';
 
 
 function Calendar(props) {
@@ -21,7 +22,7 @@ function Calendar(props) {
     const [showMonthTable, setShowMonthTable] = useState(false);
     const [selectedDay, setSelected] = useState(defaultSelectedDay);
 
-    const [activities, setActivities] = useState(true);
+    const [workouts, setWorkouts] = useState(true);
     const [loading, setLoading] = useState([]);
     
     
@@ -51,6 +52,17 @@ function Calendar(props) {
     const actualMonth = () => moment().format("MMMM");
     
     const firstDayOfMonth = () => moment(dateObject).startOf('month').format("d");
+
+    const retrieveData = () => {
+        let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
+
+        let ref = firebase.db.ref().child(`users/${authUser.uid}/workouts`);
+        ref.orderByChild("date").equalTo(queryDate).on("value", snapshot => {
+            let data = snapshot.val()
+            setWorkouts(data);
+            setLoading(false);
+        });
+    };
     
 
 
