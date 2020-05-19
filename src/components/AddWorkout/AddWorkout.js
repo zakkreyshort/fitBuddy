@@ -47,7 +47,26 @@ function AddWorkout(props) {
         });
     }
 
-    
+    const handleSlider = e => {
+        const duration = e.target.getAttribute('aria-valuenow');
+        setWorkout({...workout, duration: duration});
+    }
+
+    const isValidWorkout = workout.name === '';
+
+    const handleSubmit = () => {
+        if (authUser) {
+            firebase.addWorkout(uid, workout);
+            setWorkout(defaultWorkout);
+            setOpenSnackbar(true);
+            setSnackbarMsg('Workout added! Great job!');
+            setTimeout(() => {
+                setOpenSnackbar(false)
+            }, 3000)
+        }
+    }
+
+
 
     return (
         <form noValidate onSubmit={e => e.preventDefault()}>
@@ -104,7 +123,7 @@ function AddWorkout(props) {
             variant="contained"
             color="primary"
             onClick={handleSubmit}
-            disabled={isValid}
+            disabled={isValidWorkout}
             >
                 Add Workout
             </Button>

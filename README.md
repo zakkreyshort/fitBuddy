@@ -116,6 +116,10 @@ https://v3.material-ui.com/style/typography/#migration-to-typography-v2
 
 https://teamtreehouse.com/community/convert-timestamp-from-firebase-to-readable-date
 
+## Snackbar for success alerts
+
+https://bit.dev/mui-org/material-ui/snackbar
+
 
 # 
 
