@@ -24,6 +24,7 @@ function AddWorkout(props) {
     const classes = useStyles();
 
     const { authUser, firebase, selectedDat, setOpenSnackbar, setSnackbarMsg } = props;
+    const uid = authUser.uid;
 
     return (
         <form noValidate onSubmit={e => e.preventDefault()}>
@@ -39,9 +40,53 @@ function AddWorkout(props) {
                 name="name"
                 onChange={handleChange}
                 />
+                <div style={{marginTop: '20px', marginBottom: '30px'}}>
+                    <Typography id="discrete-slider" gutterBottom>
+                        Type
+                    </Typography>
+                    <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={workout.type}
+                    style={{minWidth: '100&'}}
+                    name="type"
+                    onChange={handleChange}
+                    >
+                    <MenuItem value={1}>Weightlifting</MenuItem>
+                    <MenuItem value={2}>Running</MenuItem>
+                    <MenuItem value={3}>Swimming</MenuItem>
+                    <MenuItem value={4}>Biking</MenuItem>
+                    <MenuItem value={5}>Hiking</MenuItem>
+                    </Select>
+                </div>
+                <Typography id="discrete-slider" gutterBottom>
+                    Duration
+                </Typography>
+                <Slider 
+                defaultValue={workout.duration}
+                aria-labelledby="discrete-slider"
+                valueLabelDisplay="auto"
+                step={10}
+                marks
+                min={10}
+                max={120}
+                name="duration"
+                onChange={handleSlider}
+                style={{marginBottom: '20px'}}
+                />
             </FormControl>
+            <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}
+            disabled={isValid}
+            >
+                Add Workout
+            </Button>
         </form>
     )
-}
+};
 
-export default AddWorkout;
+export default withFirebase(AddWorkout);

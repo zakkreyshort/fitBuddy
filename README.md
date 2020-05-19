@@ -108,6 +108,10 @@ https://stackoverflow.com/questions/39542945/firebase-get-user-by-id
 
 https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/
 
+## Material UI Typography
+
+https://v3.material-ui.com/style/typography/#migration-to-typography-v2
+
 
 # 
 
