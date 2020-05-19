@@ -79,9 +79,9 @@ function EditWorkout(props) {
                 <Typography id="discrete-slider" gutterBottom>
                     Duration
                 </Typography>
-                <Slider />
+                <Slider defaultValue={parseInt(newWorkout.duration)} aria-labelledby="discrete-slider" valueLabelDisplay="auto" step={10} marks min={10} max={120} name="duration" onChange={handleSlider} style={{marginBottom: '20px'}} />
             </FormControl>
-            <Button>
+            <Button type="submit" fullWidth variant="contained" color="primary" onClick={() => handleSubmit('add')} disabled={isValidWorkout} >
                 Save Workout
             </Button>
         </form>
