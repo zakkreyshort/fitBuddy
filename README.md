@@ -22,18 +22,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Technologies Used
 
 * Javascript
-* jQuery
 * React
 * Redux
 * Node.js
 * Firebase
-* Victory
 * Context API
 
 ## Future Plans
 * Add workout database for suggested workouts
 * Add videos/pictures of example exercises
 * Be able to update year to look at past progress
+* Implement victory for data visualization (weight gain/loss over time)
+* Implement scoreboard for longest run, most push ups, etc.
 
 
 ### License
