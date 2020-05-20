@@ -148,6 +148,10 @@ https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
 
 https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
 
+## Alt dark mode hook
+
+https://dev.to/smakosh/how-to-add-dark-mode-easily-with-a-custom-react-hook-10mj
+
 # 
 
 ## Available Scripts

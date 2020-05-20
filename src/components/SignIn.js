@@ -17,9 +17,6 @@ import Container from '@material-ui/core/Container';
 
 
 
-// notes:
-
-// copyright starts here
 function Copyright() {
 
   return (
@@ -35,7 +32,7 @@ function Copyright() {
 }
 
 
-// styling sheet starts here
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -50,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%', 
     marginTop: theme.spacing(1),
-    // backgroundColor: 'black',
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
