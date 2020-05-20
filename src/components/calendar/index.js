@@ -76,7 +76,9 @@ function Calendar(props) {
     };
     
     const retrieveActiveDays = () => {
+
         let ref = firebase.db.ref().child(`users/${authUser.uid}/workouts`);
+        
         ref.on("value", snapshot => {
             let data = snapshot.val();
             const values = Object.values(data);
