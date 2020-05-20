@@ -55,7 +55,7 @@ function Sidebar(props) {
                         <ListItemIcon>
                             <EventNoteIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Workouts" />
+                        <ListItemText primary="Random Workout" />
                     </ListItem>
                 </Link>
                 <Link to={`${match.url}`}>
@@ -63,7 +63,7 @@ function Sidebar(props) {
                         <ListItemIcon>
                             <EventNoteIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Workouts" />
+                        <ListItemText primary="Guides" />
                     </ListItem>
                 </Link>
             </List>
