@@ -25,10 +25,9 @@ const CalendarBody = props => {
     for (let d = 1; d <= daysInMonth(); d++) {
         let currDay, selectDay, activeDay;
 
-        // Check if day is today
+       
         if (currentDay() === d && currentMonth() === actualMonth()) currDay = "today";
 
-        // Check if day is selected day
         if (selectedDay.day === d && currentMonthNum() === selectedDay.month ) selectDay = "selected-day";
 
         let formattedDate = `${d}-${currentMonthNum()}`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouteMatch, withRouter, Switch } from "react-router-dom";
+import { useRouteMatch, withRouter } from "react-router-dom";
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -74,7 +74,7 @@ let match = useRouteMatch();
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            Workout Log
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
