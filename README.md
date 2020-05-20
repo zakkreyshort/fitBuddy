@@ -1,7 +1,7 @@
 # FitBuddy
 
 ## A capstone project by: Zakkrey Short
-### Last updated 19 May 2020
+### Last updated 20 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -33,7 +33,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Future Plans
 * Add workout database for suggested workouts
 * Add videos/pictures of example exercises
-* 
+* Be able to update year to look at past progress
 
 
 ### License
