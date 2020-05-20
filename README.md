@@ -7,9 +7,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Wireframe
-![Wireframe](src/img/fitBuddyComponentTree.jpg)
+![Wireframe](src/img/compDia2.png)
 
-## User Storie
+## User Stories
 
 * User can visit application and sign-in.
 * User can visit application and register an account.
