@@ -15,7 +15,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * User can log out.
 * User can select, _forgot password_ and get an email link to reset their account password.
 * User can visit their dashboard(will house calendar and workouts).
-* User can ___
+* User can add a workout on a specific day.
+* User can edit a workout.
+* User can delete a workout.
 
 ## Technologies Used
 
@@ -27,6 +29,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Firebase
 * Victory
 * Context API
+
+## Future Plans
+* Add workout database for suggested workouts
+* Add videos/pictures of example exercises
+* 
 
 
 ### License
