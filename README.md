@@ -1,6 +1,7 @@
 # FitBuddy
 
 ## A capstone project by: Zakkrey Short
+
 ### Last updated 20 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -8,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Wireframe
 ![Wireframe](src/img/fitBuddyComponentTree.jpg)
 
-## User Stories
+## User Storie
 
 * User can visit application and sign-in.
 * User can visit application and register an account.
