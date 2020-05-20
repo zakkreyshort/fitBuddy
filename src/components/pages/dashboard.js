@@ -19,6 +19,7 @@ import Calendar from '../calendar';
 
 
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -89,8 +90,7 @@ let match = useRouteMatch();
     />
 
      
-      <main className={classes.content, !open ? classes.contentClosed : classes.appBarShift }>
-        <div className={classes.appBarSpacer} />
+<main className={classes.content, !open ? classes.contentClosed : classes.appBarShift }>        <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Calendar firebase={props.firebase} authUser={authUser}/>
           <Box pt={4}>
