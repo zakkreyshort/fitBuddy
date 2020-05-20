@@ -37,7 +37,7 @@ function Copyright() {
 
 function Dashboard(props) {
 
-let match = useRouteMatch();
+// let match = useRouteMatch();
 
 
   const classes = useStyles();
@@ -77,7 +77,7 @@ let match = useRouteMatch();
             Workout Log
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={69} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>

@@ -45,7 +45,7 @@ function WorkoutList(props) {
             workouts === 'not set' || workouts === null
             ? <p>No workouts added. Get moving!</p>
             :
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} className={Paper}>
                 <Table>
                     <TableHead>
                         <TableRow>
