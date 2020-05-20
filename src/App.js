@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./components/darkmode/globalDarkmode";
+import { lightTheme, darkTheme } from "./components/darkmode/darkmode"
 import theme from './config/theme.config';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
@@ -11,6 +14,8 @@ import Dashboard from './components/pages/dashboard';
 
 
 function App() {
+
+  
   return (
     <Router>
       <ThemeProvider theme={theme}>
