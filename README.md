@@ -42,8 +42,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Copyright &copy; 2020 **_Zakkrey Short_** 
 
+#
 
-# Capstone Proposal
+## Capstone Proposal
 
 fitBuddy- Your fitness tech pal
 ##### Description
@@ -75,71 +76,73 @@ I think I have a good basis of where to start. I started looking ahead into usin
 
 # 
 
-## Context API Docs
+## Resources
+
+### Context API Docs
 
 https://reactjs.org/docs/context.html
 
-## Firebase Docs
+### Firebase Docs
 
 https://firebase.google.com/docs/web/setup
 
-## Material UI
+### Material UI
 
 https://material-ui.com
 
-## JS Calendar
+### JS Calendar
 
 https://www.npmjs.com/package/rc-calendar
 
-## Firebase AUTH
+### Firebase AUTH
 
 https://firebase.google.com/docs/auth
 
-## React Calendar 
+### React Calendar 
 
 https://programmingwithmosh.com/react/build-a-react-calendar-component-from-scratch/
 
-## Cloud Storage and creating Auth/Admin Pages
+### Cloud Storage and creating Auth/Admin Pages
 
 https://firebase.google.com/docs/functions/gcp-storage-events
 
-## SO Article on Permissions
+### SO Article on Permissions
 
 https://stackoverflow.com/questions/37403747/firebase-permission-denied
 
-## SO Article on UID/getting user values
+### SO Article on UID/getting user values
 
 https://stackoverflow.com/questions/39542945/firebase-get-user-by-id
 
-## React Components
+### React Components
 
 https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/
 
-## Material UI Typography
+### Material UI Typography
 
 https://v3.material-ui.com/style/typography/#migration-to-typography-v2
 
-## Converting timestamp to readable data
+### Converting timestamp to readable data
 
 https://teamtreehouse.com/community/convert-timestamp-from-firebase-to-readable-date
 
-## Snackbar for success alerts
+### Snackbar for success alerts
 
 https://bit.dev/mui-org/material-ui/snackbar
 
-## Loading Icons
+### Loading Icons
 
 https://loading.io
 
-## React Tables
+### React Tables
 
 https://github.com/tannerlinsley/react-table
 
-## Fetching Data in React
+### Fetching Data in React
 
 https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
 
-## Dark Mode
+### Dark Mode
 
 https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
 
