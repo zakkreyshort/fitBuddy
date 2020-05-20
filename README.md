@@ -132,6 +132,9 @@ https://github.com/tannerlinsley/react-table
 
 https://blog.logrocket.com/patterns-for-data-fetching-in-react-981ced7e5c56/
 
+## Dark Mode
+
+https://www.smashingmagazine.com/2020/04/dark-mode-react-apps-styled-components/
 
 # 
 
