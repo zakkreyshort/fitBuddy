@@ -18,8 +18,6 @@ import { AuthUserContext, withAuthentication } from '../session';
 import Calendar from '../calendar';
 
 
-
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -37,7 +35,7 @@ function Copyright() {
 
 function Dashboard(props) {
 
-// let match = useRouteMatch();
+let match = useRouteMatch();
 
 
   const classes = useStyles();
