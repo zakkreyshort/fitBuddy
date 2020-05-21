@@ -75,7 +75,7 @@ let match = useRouteMatch();
             Workout Log
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={69} color="secondary">
+            <Badge badgeContent={1} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>

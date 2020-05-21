@@ -2,7 +2,7 @@
 
 ## A capstone project by: Zakkrey Short
 
-### Last updated 20 May 2020
+### Last updated 21 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Javascript
 * React
 * Redux
-* Node.js
+* Material UI
 * Firebase
 * Context API
 
@@ -36,6 +36,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Implement victory for data visualization (weight gain/loss over time)
 * Implement scoreboard for longest run, most push ups, etc.
 
+
+## Known Bugs
+* Edit functionality currently builds a new workout.
+* Delete alerts delete snackbar but does not remove.
 
 ### License
 
