@@ -2,7 +2,7 @@
 
 ## A capstone project by: Zakkrey Short
 
-### Last updated 21 May 2020
+### Last updated 27 May 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
