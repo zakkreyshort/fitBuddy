@@ -36,6 +36,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Implement victory for data visualization (weight gain/loss over time)
 * Implement scoreboard for longest run, most push ups, etc.
 
+## Start-up Instructions 
+
+* npm install
+* npm start
+* Open localhost:3000 in browser of choice
+
+
 
 ## Known Bugs
 * Edit functionality currently builds a new workout.
